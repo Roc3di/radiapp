@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walkie Talkie Debug</title>
+  <title>Walkie Talkie Signal Debug</title>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
   <style>
     :root,[data-theme="light"]{--bg:#f7f6f2;--surface:#f9f8f5;--surface2:#fbfbf9;--offset:#f3f0ec;--text:#28251d;--muted:#6c6a65;--primary:#01696f;--danger:#a13544;--success:#437a22;--border:#d4d1ca;--radius:18px;--radius-sm:12px;--shadow:0 12px 32px rgba(0,0,0,.12);--font:'Satoshi',Inter,system-ui,sans-serif}
@@ -22,10 +22,10 @@
 </head>
 <body>
 <div class="app">
-  <div class="panel top">
+  <div class="panel top"><div class="card mono" style="width:100%">DEBUG: guarda il log per offer / answer / ice / ontrack / connectionState</div>
     <div>
-      <div class="title">Walkie Talkie Debug</div>
-      <div class="muted">Build diagnostica per capire perché l’audio remoto non passa</div>
+      <div class="title">Walkie Talkie Signal Debug</div>
+      <div class="muted">Build diagnostica per vedere offer/answer/ICE e capire dove si ferma la connessione</div>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
       <div class="chip"><span id="wsDot" class="dot"></span><span id="wsStatus">WS offline</span></div>
@@ -80,7 +80,7 @@
         <div class="card"><div class="muted">Audio remoto</div><div id="remoteAudioState">nessun elemento</div></div>
       </div>
       <div class="card diag">
-        <div><strong>Checklist</strong></div>
+        <div><strong>Checklist signaling</strong></div>
         <div id="checklist" class="mono">- WebSocket\n- Microfono\n- PeerConnection\n- ontrack\n- audio.play()</div>
       </div>
     </div>
